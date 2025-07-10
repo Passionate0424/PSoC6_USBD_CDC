@@ -11,7 +11,7 @@ USB 外设及描述符部分使用英飞凌 ModusToolbox 进行配置，主要�
    - 由于 USBFS 要求时钟为 48MHz，需要将 PLL 设置为 96MHz。
    - 时钟树如下图所示：
    
-   ![时钟树配置](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E5%A4%96%E8%AE%BE%E9%85%8D%E7%BD%AE.png)
+   ![时钟树](figures/studio1.png)
 
 2. **USB 设备配置**
    - 配置 USB 设备，选择自动 DMA。
@@ -23,18 +23,21 @@ USB 外设及描述符部分使用英飞凌 ModusToolbox 进行配置，主要�
      - cycfg_dma.c / cycfg_dma.h
      - cycfg_clock.c / cycfg_clock.h
      
-     ![外设配置](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E6%97%B6%E9%92%9F%E6%A0%91.png)
-
 3. **驱动适配**
-   - 在 `libraries` 文件夹中添加并适配 `drv_usbd.c`。
+   - 在 `libraries/HAL_Drivers/` 文件夹中添加并适配 `drv_usbd.c`。
 
 ## 目录结构
 
-- `applications/`：应用层代码
-- `board/`：板级支持包
-- `libraries/`：驱动库和硬件抽象层
-- `rt-thread/`：RT-Thread 内核源码及组件
-- 其他：编译生成文件、第三方包、图片等
+- `Project/`：工程主目录
+  - `applications/`：应用层代码（如 main.c、arduino、lvgl 等）
+  - `board/`：板级支持包（BSP）及端口适配
+  - `libraries/`：驱动库和硬件抽象层（如 HAL_Drivers、IFX_PSOC6_HAL）
+  - `build/`、`Debug/`：编译生成的中间文件和目标文件
+  - `rt-thread/`：RT-Thread 内核源码及组件
+  - `packages/`：第三方软件包
+  - `figures/`：项目相关图片
+- `pictures/`：其他图片资源
+- `README.md`：项目说明文档
 
 ## 参考
 - 英飞凌官方手册：[USBFS Device API Reference Manual](https://infineon.github.io/usbdev/usbfs_dev_api_reference_manual/html/index.html)
