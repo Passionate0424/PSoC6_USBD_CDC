@@ -10,8 +10,8 @@ USB 外设及描述符部分使用英飞凌 ModusToolbox 进行配置，主要�
    - 使用 ModusToolbox 修改时钟配置，USB 选择 USBFS。
    - 由于 USBFS 要求时钟为 48MHz，需要将 PLL 设置为 96MHz。
    - 时钟树如下图所示：
-
-   ![时钟树配置]([pictures\时钟树.png](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E5%A4%96%E8%AE%BE%E9%85%8D%E7%BD%AE.png))
+   
+   [时钟树配置](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E5%A4%96%E8%AE%BE%E9%85%8D%E7%BD%AE.png)
 
 2. **USB 设备配置**
    - 配置 USB 设备，选择自动 DMA。
@@ -23,7 +23,7 @@ USB 外设及描述符部分使用英飞凌 ModusToolbox 进行配置，主要�
      - cycfg_dma.c / cycfg_dma.h
      - cycfg_clock.c / cycfg_clock.h
      
-     ![外设配置]([pictures\外设配置.png](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E6%97%B6%E9%92%9F%E6%A0%91.png))
+     [外设配置](https://github.com/Passionate0424/PSoC6_USBD_CDC/blob/main/pictures/%E6%97%B6%E9%92%9F%E6%A0%91.png)
 
 3. **驱动适配**
    - 在 `libraries` 文件夹中添加并适配 `drv_usbd.c`。
